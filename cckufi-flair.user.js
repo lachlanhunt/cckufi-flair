@@ -8,7 +8,7 @@
 // @version     0.0.1
 // @grant       none
 // ==/UserScript==
- 
+
 (function() {
 	var userlist = [
 		"sotricious",
@@ -5308,21 +5308,26 @@
 		"swinginfriar"
 	];
 
-	Array.from(document.querySelectorAll("a.author"))
-	     .filter((link) => userlist.indexOf(link.textContent) >= 0)
-	     .forEach((link) => link.className += " ccKufiPrFaSh";)
- 
-    var css = `.ccKufiPrFaSh::after {
-		content: " ";
-		display: inline-block;
-		height: 3px;
-		width: 9px;
-		border-top: 3px solid green;
-		border-bottom: 3px solid green;
-		margin: 0 5px;
-	}`;
- 
-	var style = document.createElement("style");
-	style.textContent = css;
-	document.querySelector("head").appendChild(style);
+    Array.from(
+        document.querySelectorAll("a.author")
+    ).filter((link) => 
+		    userlist.indexOf(link.textContent) >= 0
+		).forEach((link) => {
+        link.className += " ccKufiPrFaSh";
+    })
+
+    var css = `
+    .ccKufiPrFaSh::after {
+        content: " ";
+        display: inline-block;
+        height: 3px;
+        width: 9px;
+        border-top: 3px solid green;
+        border-bottom: 3px solid green;
+        margin: 0 5px;
+    }`;
+
+    var style = document.createElement("style");
+    style.textContent = css;
+    document.querySelector("head").appendChild(style);
 })();
