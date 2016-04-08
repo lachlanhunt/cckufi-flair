@@ -7,7 +7,7 @@
 // @include     https://www.reddit.com/*
 // @include     https://np.reddit.com/*
 // @include     https://m.reddit.com/*
-// @version     0.0.1
+// @version     0.0.2
 // @grant       none
 // ==/UserScript==
 
@@ -5311,7 +5311,7 @@
 	];
 
     Array.from(
-        document.querySelectorAll("a.author")
+        document.querySelectorAll("a.author, a.userTagged")
     ).filter((link) => 
 		    userlist.indexOf(link.textContent) >= 0
 		).forEach((link) => {
@@ -5324,8 +5324,9 @@
         display: inline-block;
         height: 3px;
         width: 9px;
-        border-top: 3px solid green;
-        border-bottom: 3px solid green;
+        border-top: 3px solid #7ED321;
+        border-bottom: 3px solid #7ED321;
+        border-radius: 1px;
         margin: 0 5px;
     }`;
 
