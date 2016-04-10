@@ -45,3 +45,6 @@ Temporary Items
 *.stTheme.cache
 *.sublime-workspace
  *.sublime-project
+
+# NodeJS
+node_modules

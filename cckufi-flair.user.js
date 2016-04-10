@@ -5313,8 +5313,8 @@
     Array.from(
         document.querySelectorAll("a.author, a.userTagged")
     ).filter((link) => 
-		    userlist.indexOf(link.textContent) >= 0
-		).forEach((link) => {
+	    userlist.indexOf(link.textContent) >= 0
+	).forEach((link) => {
         link.className += " ccKufiPrFaSh";
     })
 
