@@ -1,7 +1,7 @@
 ccKufi-flair
 ===
 
-This is a userscript for the exclusive ccKufiPrFaShleWoli0 subreddit. This is designed to add a flair to all known redditors who were lucky enough to make it to Tier 17 in Reddit's Robin, wherever you see them on Reddit. (April Fools 2016 experiment).
+This is a userscript for the exclusive ccKufiPrFaShleWoli0 subreddit. This is designed to add a flair to all known redditors who were lucky enough to make it to Tier 17 in Reddit's Robin, wherever you see them on Reddit. (April Fools 2016 experiment). It also flairs the unlucky ones who were kicked from the Tier 16 room during the final merge.
 
 Install a userscript extension such as [greasemonkey](http://www.greasespot.net/) or [tampermonkey](http://tampermonkey.net)
 
