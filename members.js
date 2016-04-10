@@ -1,3 +1,9 @@
+// Usage:
+// $ node members.js > members.json
+// The JSON output will be an array of all users, in the format:
+// [{"u": "username", "v": "VOTE"}, ...]
+// Where VOTE is "GROW", "STAY", "NOVOTE" or "ABANDON"
+
 var Promise = require("bluebird");
 var fs = Promise.promisifyAll(require('fs'));
 
@@ -32,7 +38,7 @@ function processMembers(memberLists) {
 	var cckufi = memberLists[0];
 	var ccfiande = memberLists[1];
 
-	var members = [...cckufi, ...ccfiande.filter(user => !cckufi.find(item => item.u === user.u))]
+	var members = [...cckufi, ...ccfiande.filter(user => !cckufi.find(item => item.u === user.u))];
 
 	console.error("ccKufi Members:", cckufi.length);
 	console.error("ccfiande Members:", ccfiande.length);
