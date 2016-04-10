@@ -7,7 +7,7 @@
 // @include     https://www.reddit.com/*
 // @include     https://np.reddit.com/*
 // @include     https://m.reddit.com/*
-// @version     0.0.2
+// @version     0.0.3
 // @grant       none
 // ==/UserScript==
 
@@ -5309,6 +5309,12 @@
 		"Deflect57",
 		"swinginfriar"
 	];
+	
+	var t16List = [ //Very incomplete - just for testing
+		"kinetic37",
+		"Player72",
+		"minichado"
+	];
 
     Array.from(
         document.querySelectorAll("a.author, a.userTagged")
@@ -5316,7 +5322,15 @@
 		    userlist.indexOf(link.textContent) >= 0
 		).forEach((link) => {
         link.className += " ccKufiPrFaSh";
-    })
+    });
+		
+		Array.from(
+        document.querySelectorAll("a.author, a.userTagged")
+    ).filter((link) => 
+		    t16List.indexOf(link.textContent) >= 0
+		).forEach((link) => {
+        link.className += " t16Booted";
+    });
 
     var css = `
     .ccKufiPrFaSh::after {
@@ -5328,7 +5342,17 @@
         border-bottom: 3px solid #7ED321;
         border-radius: 1px;
         margin: 0 5px;
-    }`;
+    }
+
+     .t16Booted::after {
+        content: " ";
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background: #989898;
+        margin: 1px 5px;
+     }`;
 
     var style = document.createElement("style");
     style.textContent = css;
