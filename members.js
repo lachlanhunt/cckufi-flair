@@ -25,24 +25,23 @@ Promise.all([
 function parseCSV(csv) {
 	return csv.trim().split(
 		"\n"
-	).map(line => {
-		var row = line.split(",");
-		return {
-			u: row[0],
-			v: row[1]
-		}
-	})
+	).map(line => line.split(",")[0])
 }
 
 function processMembers(memberLists) {
 	var cckufi = memberLists[0];
 	var ccfiande = memberLists[1];
 
-	var members = [...cckufi, ...ccfiande.filter(user => !cckufi.find(item => item.u === user.u))];
+	var members = {
+		grow: cckufi.sort(),
+		abstain: ccfiande.filter(user => cckufi.indexOf(user) === -1).sort()
+	};
 
 	console.error("ccKufi Members:", cckufi.length);
 	console.error("ccfiande Members:", ccfiande.length);
-	console.error("Total Members", members.length);
+	console.error("Grow Members", members.grow.length);
+	console.error("Abstain Members", members.abstain.length);
+	console.error("Total Members", members.grow.length + members.abstain.length);
 
 	console.log(JSON.stringify(members));
 }
