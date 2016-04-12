@@ -2,7 +2,9 @@
 // @name        ccKufi-flair
 // @namespace   http://lachy.id.au/
 // @description Highlights Members of the exclusive ccKufi Robin Room
-// @author      lachlanhunt, joefarebrother
+// @author      Lachlan Hunt https://github.com/lachlanhunt
+// @contributor joefarebrother https://github.com/joefarebrother
+// @contributor Mithent https://github.com/Mithent
 // @updateURL   https://github.com/lachlanhunt/cckufi-flair/raw/master/cckufi-flair.user.js
 // @include     https://www.reddit.com/*
 // @include     https://np.reddit.com/*
