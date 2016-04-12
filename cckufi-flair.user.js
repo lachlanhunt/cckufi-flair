@@ -53,7 +53,7 @@
 	}
 
 	function isUserPageOfMemberOf(group) {
-		if (document.URL.indexOf("reddit.com/user/") === -1) return false;
+		if (!window.location.pathname.startsWith("/user/")) return false;
 
 		var user = document.querySelector(".titlebox h1");
 		return memberOf(group, user);
