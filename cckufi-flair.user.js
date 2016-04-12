@@ -50,7 +50,7 @@
 
 	function userPageOfMemberOf(group) {
 		var user = document.querySelector(".titlebox h1");
-	return memberOf(group, user);
+		return memberOf(group, user);
 	}
 
 	function addTrophy(trophyCase, iconSrc, trophyName) {
