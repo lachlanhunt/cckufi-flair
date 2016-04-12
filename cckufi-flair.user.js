@@ -32,7 +32,6 @@
 	}
 
 	function memberOf(group, user) {
-		debugger;
 		return group.indexOf(user.textContent) >= 0;
 	}
 
