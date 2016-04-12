@@ -43,7 +43,7 @@
 
 		userLink.parentNode.insertBefore(flair, userLink.nextSibling);
 	}
-	
+
 	function getTrophyCase() {
 		return document.querySelector("table.trophy-table");
 	}
