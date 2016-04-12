@@ -48,7 +48,9 @@
 		return document.querySelector("table.trophy-table");
 	}
 
-	function userPageOfMemberOf(group) {
+	function isUserPageOfMemberOf(group) {
+		if (document.URL.indexOf("reddit.com/user/") === -1) return false;
+
 		var user = document.querySelector(".titlebox h1");
 		return memberOf(group, user);
 	}
@@ -105,9 +107,11 @@
 	allUsers.filter(memberOf.bind(this, members.grow)).forEach(addFlair.bind(this, ROBIN_GROW));
 	allUsers.filter(memberOf.bind(this, members.abstain)).forEach(addFlair.bind(this, ROBIN_ABSTAIN));
 
-	var trophyCase = getTrophyCase();
-	if (trophyCase && userPageOfMemberOf(members.grow)) {
-		addTrophy(trophyCase, growTrophyImgSrc, growTrophyName);
+	if (isUserPageOfMemberOf(members.grow)) {
+		var trophyCase = getTrophyCase();
+		if (trophyCase) {
+			addTrophy(trophyCase, growTrophyImgSrc, growTrophyName);
+		}
 	}
 
     var css = `
