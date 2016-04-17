@@ -9,7 +9,7 @@
 // @include     https://www.reddit.com/*
 // @include     https://np.reddit.com/*
 // @include     https://m.reddit.com/*
-// @version     0.2.1
+// @version     0.2.2
 // @grant       none
 // ==/UserScript==
 
