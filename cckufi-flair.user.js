@@ -5,11 +5,12 @@
 // @author      Lachlan Hunt https://github.com/lachlanhunt
 // @contributor joefarebrother https://github.com/joefarebrother
 // @contributor Mithent https://github.com/Mithent
+// @contributor teamvista https://github.com/teamvista
 // @updateURL   https://github.com/lachlanhunt/cckufi-flair/raw/master/cckufi-flair.user.js
 // @include     https://www.reddit.com/*
 // @include     https://np.reddit.com/*
 // @include     https://m.reddit.com/*
-// @version     0.2.2
+// @version     0.2.3
 // @grant       none
 // ==/UserScript==
 
