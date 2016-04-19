@@ -1,6 +1,6 @@
 {
   "name": "cckufi-flair",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": " Userscript for adding a flair to members of Reddit's ccKufiPrFaShleWoli0 subreddit",
   "main": "cckufi-flair.user.js",
   "scripts": {
